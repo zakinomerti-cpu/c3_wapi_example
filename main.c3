@@ -66,7 +66,7 @@ fn void main() @export("main")
 	);
 
 	while(isWindow(hwnd)) {
-		while(peekMessage(null, null, 0, 0, 1)) {
+		while(peekMessage(&msg, null, 0, 0, 1)) {
 			translateMessage(&msg);
 			dispatchMessage(&msg);
 		}
